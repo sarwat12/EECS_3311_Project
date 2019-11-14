@@ -11,7 +11,7 @@ create
 	make
 
 feature -- Queries
-	model: ETF_MODEL
+	model: ANALYZER
 
 	error: BOOLEAN
 
@@ -32,7 +32,7 @@ feature -- Constructor
 	make
 			-- Initialize.
 		local
-			model_access: ETF_MODEL_ACCESS
+			model_access: ANALYZER_ACCESS
 		do
 			model := model_access.m
 			create sys.make
