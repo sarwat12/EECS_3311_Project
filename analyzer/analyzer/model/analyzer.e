@@ -20,7 +20,7 @@ feature {NONE} -- Initialization
 	make
 			-- Initialization for `Current'.
 		do
-			
+
 		end
 
 feature -- model attributes
@@ -173,6 +173,7 @@ feature -- queries
 
 			if not message.is_empty then
 				Result.append(message)
+				create message.make_empty
 			else
 
 			end
