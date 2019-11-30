@@ -7,4 +7,9 @@ note
 deferred class
 	EXPRESSION
 
+feature
+	accept(v: VISITOR)
+		deferred
+		end
+
 end
