@@ -1,0 +1,9 @@
+
+->add_class("A")
+
+->add_class("B")
+
+->add_command("A","ca",<<["x", "INTEGER"], ["y", "BOOLEAN"], ["x", "A"], ["y", "B"]>>)
+
+->add_command("A","cq",<<["x", "B"], ["y", "INTEGER"], ["y", "A"], ["x", "BOOLEAN"]>>)
+

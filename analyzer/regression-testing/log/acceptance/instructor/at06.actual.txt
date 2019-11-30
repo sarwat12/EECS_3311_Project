@@ -1,0 +1,15 @@
+
+->add_class("A")
+
+->add_class("B")
+
+->add_command("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>)
+
+->add_query("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"int")
+
+->add_query("A","cq",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"C")
+
+->add_attribute("A","att","C")
+
+->add_query("A","ca",<<["x", "INTEGER"], ["y", "BOOLEAN"], ["z", "A"]>>,"C")
+

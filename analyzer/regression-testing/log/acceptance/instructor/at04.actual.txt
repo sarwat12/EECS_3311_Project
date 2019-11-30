@@ -1,0 +1,9 @@
+
+->add_class("A")
+
+->add_class("B")
+
+->add_command("A","ca",<<["A", "INTEGER"], ["B", "BOOLEAN"]>>)
+
+->add_query("B","cb",<<["INTEGER", "A"], ["BOOLEAN", "B"]>>,"INTEGER")
+

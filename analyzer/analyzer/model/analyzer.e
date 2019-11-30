@@ -175,7 +175,7 @@ feature -- queries
 				Result.append(message)
 				create message.make_empty
 			else
-
+				
 			end
 
 		end

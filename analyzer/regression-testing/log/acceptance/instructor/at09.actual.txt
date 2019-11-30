@@ -1,0 +1,29 @@
+
+->add_class("A")
+
+->add_class("B")
+
+->add_attribute("A","b","B")
+
+->add_query("A","q1",<<["i", "INTEGER"]>>,"A")
+
+->add_assignment_instruction("A","q1","Result")
+
+->add_call_chain(<<"b", "a">>)
+
+->type_check
+
+->generate_java_code
+
+->add_attribute("B","a","A")
+
+->add_command("B","c1",<<>>)
+
+->add_assignment_instruction("B","c1","a")
+
+->add_call_chain(<<"b", "a">>)
+
+->type_check
+
+->generate_java_code
+

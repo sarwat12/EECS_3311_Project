@@ -1,0 +1,45 @@
+
+->add_class("A")
+
+->generate_java_code
+
+->add_class("B")
+
+->generate_java_code
+
+->add_attribute("A","b","B")
+
+->generate_java_code
+
+->add_query("A","q1",<<["i", "INTEGER"]>>,"A")
+
+->generate_java_code
+
+->add_assignment_instruction("A","q1","Result")
+
+->generate_java_code
+
+->add_call_chain(<<"b", "a">>)
+
+->generate_java_code
+
+->type_check
+
+->add_attribute("B","a","A")
+
+->generate_java_code
+
+->add_command("B","c1",<<>>)
+
+->generate_java_code
+
+->add_assignment_instruction("B","c1","a")
+
+->generate_java_code
+
+->add_call_chain(<<"b", "a">>)
+
+->generate_java_code
+
+->type_check
+
