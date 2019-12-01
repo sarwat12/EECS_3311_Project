@@ -49,14 +49,14 @@ feature
 	class_status: STRING
 		do
 			create Result.make_empty
-			Result.append("  Number of attributes: " + num_attributes.out + "%N")
-			if children.is_empty then
-				across children as c loop
-					if attached {ATTRIBUTE_DECLARATION} c.item then
-						check attached {ATTRIBUTE_DECLARATION} c.item as attr then
-							Result.append(attr.attribute_status)
-						end
+			Result.append("      Number of attributes: " + num_attributes.out + "%N")
+			across children as c loop
+				if attached {ATTRIBUTE_DECLARATION} c.item then
+					check attached {ATTRIBUTE_DECLARATION} c.item as attr then
+						Result.append(attr.attribute_status)
 					end
+				end
+			end
 					if attached {QUERY} c.item then
 						check attached {QUERY} c.item as query then
 							Result.append(query.query_status)
@@ -69,5 +69,4 @@ feature
 					end
 				end
 			end
-		end
 end

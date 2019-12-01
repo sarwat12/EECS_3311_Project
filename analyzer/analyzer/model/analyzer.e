@@ -21,14 +21,13 @@ feature {NONE} -- Initialization
 			-- Initialization for `Current'.
 		do
 			start := TRUE
-			status := FALSE
 			create message.make_empty
+			create status.make_empty
 			create program.make
 		end
 
 feature -- model attributes
 	start: BOOLEAN
-	status: BOOLEAN
 	program: PROGRAM
 
 feature -- model operations
@@ -50,7 +49,8 @@ feature -- model operations
 
 	add_class(cn: STRING)
 		do
-
+			program.add_class (cn)
+			set_status("  Status: OK.%N")
 		end
 
 	add_command(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; ft: STRING]])
@@ -157,6 +157,12 @@ feature --Extra helper features
 
 feature --Error Reporting
 	message: STRING
+	status: STRING
+
+	set_status(sts: STRING)
+		do
+			status := sts
+		end
 
 	set_message(msg: STRING)
 		do
@@ -173,6 +179,9 @@ feature -- queries
 				Result.append("  Number of classes being specified: 0")
 				start := FALSE
 			end
+			Result.append (status)
+			status.make_empty
+			Result.append (program.program_status)
 
 			if not message.is_empty then
 				Result.append(message)
