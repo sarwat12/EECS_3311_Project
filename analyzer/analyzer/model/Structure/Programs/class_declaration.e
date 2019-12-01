@@ -14,9 +14,60 @@ create
 	make
 
 feature
-	make
+	make(n: STRING)
 		do
 			create children.make
+			name := n
+			num_queries := 0
+			num_commands := 0
+			num_attributes := 0
 		end
 
+feature--Class attributes
+	name: STRING
+	num_queries: INTEGER
+	num_commands: INTEGER
+	num_attributes: INTEGER
+
+feature
+
+	increase_queries
+		do
+			num_queries := num_queries + 1
+		end
+
+	increase_commands
+		do
+			num_commands := num_commands + 1
+		end
+
+	increase_attributes
+		do
+			num_attributes := num_attributes + 1
+		end
+
+	class_status: STRING
+		do
+			create Result.make_empty
+			Result.append("  Number of attributes: " + num_attributes.out + "%N")
+			if children.is_empty then
+				across children as c loop
+					if attached {ATTRIBUTE_DECLARATION} c.item then
+						check attached {ATTRIBUTE_DECLARATION} c.item as attr then
+							Result.append(attr.attribute_status)
+						end
+					end
+					if attached {QUERY} c.item then
+						check attached {QUERY} c.item as query then
+							Result.append(query.query_status)
+						end
+					end
+					if attached {COMMAND} c.item then
+						check attached {COMMAND} c.item as command then
+							Result.append(command.command_status)
+						end
+					end
+				end
+			end
+		end
 end

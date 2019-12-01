@@ -16,13 +16,13 @@ create
 feature
 	make(expr: EXPRESSION)
 		do
+			create children.make
 			create negation.make_from_string ("!")
-			expression := expr
+			add_child(expr)
 		end
 
 feature
 	negation: STRING
-	expression: EXPRESSION
 
 feature
 	accept(v: VISITOR)

@@ -9,5 +9,12 @@ deferred class
 
 inherit
 	EXPRESSION
+	COMPOSITE[EXPRESSION]
+
+feature
+	expression: EXPRESSION
+		do
+			Result := children.at(children.lower)
+		end
 
 end

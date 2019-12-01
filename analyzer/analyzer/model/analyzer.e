@@ -20,18 +20,18 @@ feature {NONE} -- Initialization
 	make
 			-- Initialization for `Current'.
 		do
-
+			start := TRUE
+			status := FALSE
+			create message.make_empty
+			create program.make
 		end
 
 feature -- model attributes
-
+	start: BOOLEAN
+	status: BOOLEAN
+	program: PROGRAM
 
 feature -- model operations
-
-	addition
-		do
-
-		end
 
 	add_assignment_instruction(cn: STRING ; fn: STRING ; n: STRING)
 		do
@@ -83,11 +83,6 @@ feature -- model operations
 
 		end
 
-	generate_java_code
-		do
-
-		end
-
 	greater_than
 		do
 
@@ -128,7 +123,19 @@ feature -- model operations
 
 		end
 
+	addition
+		do
+
+		end
+
 	subtraction
+		do
+
+		end
+
+feature --Operations
+
+	generate_java_code
 		do
 
 		end
@@ -144,38 +151,34 @@ feature -- model operations
 			make
 		end
 
+feature --Extra helper features
+
+
+
 feature --Error Reporting
 	message: STRING
-		attribute
-			create Result.make_empty
-		end
 
 	set_message(msg: STRING)
 		do
 			message := msg
 		end
 
-	error1: STRING
-		attribute
-			Result := "Error1"
-		end
-
-	error2: STRING
-		attribute
-			Result := "Error2"
-		end
-
-
 feature -- queries
 	out : STRING
 		do
 			create Result.make_empty
 
+			if start = TRUE then
+				Result.append("  Status: OK.%N")
+				Result.append("  Number of classes being specified: 0")
+				start := FALSE
+			end
+
 			if not message.is_empty then
 				Result.append(message)
 				create message.make_empty
 			else
-				
+
 			end
 
 		end

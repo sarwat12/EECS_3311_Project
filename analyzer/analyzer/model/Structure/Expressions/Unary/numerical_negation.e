@@ -17,12 +17,12 @@ feature
 	make(expr: EXPRESSION)
 		do
 			create negation.make_from_string ("-")
-			expression := expr
+			create children.make
+			add_child(expr)
 		end
 
 feature
 	negation: STRING
-	expression: EXPRESSION
 
 feature
 	accept(v: VISITOR)
