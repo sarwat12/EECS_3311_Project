@@ -41,7 +41,7 @@ feature -- attributes
 
 	out : STRING
 
-	etf_cmd_error: BOOLEAN
+	etf_cmd_Error: BOOLEAN
 
 	debug_output: STRING
 		do

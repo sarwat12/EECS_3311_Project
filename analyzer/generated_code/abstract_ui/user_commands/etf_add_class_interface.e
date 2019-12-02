@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "add_class(" + etf_event_argument_out("add_class", "cn", cn) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "generate_java_code"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

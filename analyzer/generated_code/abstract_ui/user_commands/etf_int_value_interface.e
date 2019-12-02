@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "int_value(" + etf_event_argument_out("int_value", "c", c) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

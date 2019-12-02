@@ -13,14 +13,14 @@ feature {NONE} -- Initialization
 		-- Initialization for `Current'.
 	do
 		create output.make_empty
-		create error_message.make_empty
+		create Error_message.make_empty
 	end
 
 feature -- queries
 
 	output: STRING
 
-	error_message: STRING
+	Error_message: STRING
 
 
 feature -- Log to 'output'
@@ -48,10 +48,10 @@ feature -- Log to 'output'
 			end
 		end
 
-	log_error (a_error: STRING)
-			-- Log 'a_error' to 'error_message'
+	log_Error (a_Error: STRING)
+			-- Log 'a_Error' to 'Error_message'
 		do
-			error_message := a_error
+			Error_message := a_Error
 		end
 end
 

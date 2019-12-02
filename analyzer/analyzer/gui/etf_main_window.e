@@ -88,7 +88,7 @@ feature {NONE} -- Implementation
 			cmd := command.text
 
 			execute_command (cmd)
-			if not business_obj.error then
+			if not business_obj.Error then
 				-- This means that the history was empty before the
 				-- valid command 'cmd' was executed.
 				if business_obj.history.count = 1 then
@@ -115,9 +115,9 @@ feature {NONE} -- Implementation
 			fu: ETF_FILE_UTILITY
 		do
 			create fu.read_text_from (session_file_path)
-			if fu.error then
+			if fu.Error then
 				clear_display
-				status.insert_text (fu.error_string)
+				status.insert_text (fu.Error_string)
 			else
 				if not business_obj.history.is_empty then
 					reset_pressed
@@ -139,11 +139,11 @@ feature {NONE}
 			-- print off stack trace if there's any contract violation.
 		local
 			problem: STRING
-			error: BOOLEAN
+			Error: BOOLEAN
 		do
 			create problem.make_empty
 
-			if not error then
+			if not Error then
 				business_obj.execute_cmd (cmd)
 				clear_display
 				display_history (business_obj.history)
@@ -151,10 +151,10 @@ feature {NONE}
 				status.insert_text (business_obj.status_message)
 				output.insert_text (business_obj.output_message)
 
-				-- in case there's a syntax or type error,
+				-- in case there's a syntax or type Error,
 				-- keep the typed command on the text field
 				-- so that it can be fixed.
-				if business_obj.error then
+				if business_obj.Error then
 					command.set_text (cmd)
 				end
 			else
@@ -181,7 +181,7 @@ feature {NONE}
 				output.insert_text (business_obj.output_message)
 			end
 		rescue
-			error := true
+			Error := true
 			retry
 		end
 end

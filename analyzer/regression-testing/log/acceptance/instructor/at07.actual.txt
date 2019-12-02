@@ -33,8 +33,10 @@
         + qa: INTEGER
       Number of commands: 1
         + ca
+  Routine currently being implemented: {A}.qb
+  Assignment being specified: x := ?
 ->add_assignment_instruction("A","cb","y")
-  Status: ERROR (An assignment instruction is currently being specified for routine qb in class A).
+  Status: Error (An assignment instruction is currently being specified for routine qb in class A).
   Number of classes being specified: 1
     A
       Number of attributes: 0
@@ -42,8 +44,10 @@
         + qa: INTEGER
       Number of commands: 1
         + ca
+  Routine currently being implemented: {A}.qb
+  Assignment being specified: x := ?
 ->add_attribute("A","att","BOOLEAN")
-  Status: ERROR (An assignment instruction is currently being specified for routine qb in class A).
+  Status: Error (An assignment instruction is currently being specified for routine qb in class A).
   Number of classes being specified: 1
     A
       Number of attributes: 0
@@ -51,8 +55,10 @@
         + qa: INTEGER
       Number of commands: 1
         + ca
+  Routine currently being implemented: {A}.qb
+  Assignment being specified: x := ?
 ->add_assignment_instruction("A","att","z")
-  Status: ERROR (An assignment instruction is currently being specified for routine qb in class A).
+  Status: Error (An assignment instruction is currently being specified for routine qb in class A).
   Number of classes being specified: 1
     A
       Number of attributes: 0
@@ -60,8 +66,10 @@
         + qa: INTEGER
       Number of commands: 1
         + ca
+  Routine currently being implemented: {A}.qb
+  Assignment being specified: x := ?
 ->add_assignment_instruction("A","qa","att")
-  Status: ERROR (An assignment instruction is currently being specified for routine qb in class A).
+  Status: Error (An assignment instruction is currently being specified for routine qb in class A).
   Number of classes being specified: 1
     A
       Number of attributes: 0
@@ -69,6 +77,8 @@
         + qa: INTEGER
       Number of commands: 1
         + ca
+  Routine currently being implemented: {A}.qb
+  Assignment being specified: x := ?
 ->add_call_chain(<<>>)
 
   Number of classes being specified: 1

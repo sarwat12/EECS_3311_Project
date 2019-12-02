@@ -237,6 +237,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"c", "b", "a", "b">>)
 
   Number of classes being specified: 3
@@ -262,7 +264,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -285,6 +287,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"pa", "b">>)
 
   Number of classes being specified: 3
@@ -310,7 +314,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -333,6 +337,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"b">>)
 
   Number of classes being specified: 3
@@ -358,7 +364,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -381,6 +387,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"pb">>)
 
   Number of classes being specified: 3
@@ -406,7 +414,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -429,6 +437,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"b", "c", "a", "b">>)
 
   Number of classes being specified: 3
@@ -454,7 +464,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -477,6 +487,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"a", "b">>)
 
   Number of classes being specified: 3
@@ -502,7 +514,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -525,6 +537,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"b", "b", "c", "b">>)
 
   Number of classes being specified: 3
@@ -550,7 +564,7 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -573,6 +587,8 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?
 ->add_call_chain(<<"a", "b", "c">>)
 
   Number of classes being specified: 3
@@ -622,7 +638,7 @@
       Number of commands: 1
         + cc
 ->type_check
-  Status: ERROR (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
@@ -645,3 +661,5 @@
       Number of queries: 0
       Number of commands: 1
         + cc
+  Routine currently being implemented: {A}.ca
+  Assignment being specified: b := ?

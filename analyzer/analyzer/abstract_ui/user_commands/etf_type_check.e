@@ -15,8 +15,10 @@ feature -- command
     	do
 			-- perform some update on the model state
 			if model.assignment_instruction = TRUE then
-				model.set_status ("  Status: ERROR (An assignment instruction is currently being specified for routine "
+				model.set_status ("  Status: Error (An assignment instruction is currently being specified for routine "
 				+ model.assignment.fn + " in class " + model.assignment.cn + ").")
+				model.message.append ("%N  Routine currently being implemented: {" + model.assignment.cn + "}." + model.assignment.fn)
+				model.message.append ("%N  Assignment being specified: " + model.assignment.vn + " := " + model.specified)
 			else
 				model.type_check
 			end

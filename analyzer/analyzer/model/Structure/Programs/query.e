@@ -22,7 +22,7 @@ feature
 		end
 
 feature
-	name: STRING
+	--name: STRING
 	parameters: ARRAY[TUPLE[STRING, STRING]]
 	return_type: STRING
 

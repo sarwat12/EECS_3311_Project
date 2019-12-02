@@ -40,217 +40,217 @@ when 1 then
 	yy_column := yy_column + yy_end - yy_start - yy_more_len
 --|#line 67 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 67")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 67")
 end
 -- ignore whitespaces
 when 2 then
 yy_set_line_column
 --|#line 69 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 69")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 69")
 end
 -- ignore new lines
 when 3 then
 	yy_column := yy_column + 6
 --|#line 71 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 71")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 71")
 end
 last_token := TK_SYSTEM
 when 4 then
 	yy_column := yy_column + 4
 --|#line 72 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 72")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 72")
 end
 last_token := TK_BOOL
 when 5 then
 	yy_column := yy_column + 7
 --|#line 73 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 73")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 73")
 end
 last_token := TK_BOOLEAN
 when 6 then
 	yy_column := yy_column + 4
 --|#line 74 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 74")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 74")
 end
 last_token := TK_CHAR
 when 7 then
 	yy_column := yy_column + 9
 --|#line 75 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 75")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 75")
 end
 last_token := TK_CHARACTER
 when 8 then
 	yy_column := yy_column + 10
 --|#line 76 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 76")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 76")
 end
 last_token := TK_INTEGER_64
 when 9 then
 	yy_column := yy_column + 7
 --|#line 77 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 77")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 77")
 end
 last_token := TK_INTEGER
 when 10 then
 	yy_column := yy_column + 4
 --|#line 78 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 78")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 78")
 end
 last_token := TK_REAL
 when 11 then
 	yy_column := yy_column + 6
 --|#line 79 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 79")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 79")
 end
 last_token := TK_STR
 when 12 then
 	yy_column := yy_column + 5
 --|#line 80 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 80")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 80")
 end
 last_token := TK_VALUE
 when 13 then
 	yy_column := yy_column + 5
 --|#line 81 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 81")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 81")
 end
 last_token := TK_TUPLE
 when 14 then
 	yy_column := yy_column + 5
 --|#line 82 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 82")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 82")
 end
 last_token := TK_ARRAY
 when 15 then
 	yy_column := yy_column + 1
 --|#line 84 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 84")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 84")
 end
 last_token := TK_COMMA
 when 16 then
 	yy_column := yy_column + 1
 --|#line 85 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 85")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 85")
 end
 last_token := TK_COLON
 when 17 then
 	yy_column := yy_column + 1
 --|#line 86 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 86")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 86")
 end
 last_token := TK_SEMI_COLON
 when 18 then
 	yy_column := yy_column + 1
 --|#line 87 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 87")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 87")
 end
 last_token := TK_LPAREN
 when 19 then
 	yy_column := yy_column + 1
 --|#line 88 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 88")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 88")
 end
 last_token := TK_RPAREN
 when 20 then
 	yy_column := yy_column + 1
 --|#line 89 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 89")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 89")
 end
 last_token := TK_LSBRAC
 when 21 then
 	yy_column := yy_column + 1
 --|#line 90 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 90")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 90")
 end
 last_token := TK_RSBRAC
 when 22 then
 	yy_column := yy_column + 1
 --|#line 91 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 91")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 91")
 end
 last_token := TK_LABRAC
 when 23 then
 	yy_column := yy_column + 1
 --|#line 92 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 92")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 92")
 end
 last_token := TK_RABRAC
 when 24 then
 	yy_column := yy_column + 1
 --|#line 93 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 93")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 93")
 end
 last_token := TK_LCBRAC
 when 25 then
 	yy_column := yy_column + 1
 --|#line 94 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 94")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 94")
 end
 last_token := TK_RCBRAC
 when 26 then
 	yy_column := yy_column + 1
 --|#line 95 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 95")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 95")
 end
 last_token := TK_DQUOTE
 when 27 then
 	yy_column := yy_column + 1
 --|#line 96 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 96")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 96")
 end
 last_token := TK_MINUS
 when 28 then
 	yy_column := yy_column + 2
 --|#line 97 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 97")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 97")
 end
 last_token := TK_UPTO
 when 29 then
 	yy_column := yy_column + 4
 --|#line 98 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 98")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 98")
 end
 last_token := TK_TYPE
 when 30 then
 	yy_column := yy_column + 1
 --|#line 99 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 99")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 99")
 end
 last_token := TK_EQ
 when 31 then
 	yy_column := yy_column + 4
 --|#line 101 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 101")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 101")
 end
 
 			 last_string_value := text
@@ -260,7 +260,7 @@ when 32 then
 	yy_column := yy_column + 5
 --|#line 106 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 106")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 106")
 end
 
 			 last_string_value := text
@@ -270,7 +270,7 @@ when 33 then
 	yy_column := yy_column + yy_end - yy_start - yy_more_len
 --|#line 111 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 111")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 111")
 end
  -- return a digit token and store the integer value in last_integer_value, which the parser will use
 			-- last_integer_value := text.to_integer
@@ -281,7 +281,7 @@ when 34 then
 	yy_column := yy_column + yy_end - yy_start - yy_more_len
 --|#line 117 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 117")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 117")
 end
 
 		                 -- last_real_value := text.to_real
@@ -292,7 +292,7 @@ when 35 then
 	yy_column := yy_column + yy_end - yy_start - yy_more_len
 --|#line 123 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 123")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 123")
 end
  -- return an identifier and store the value in last_string_value, which the parser will use
 			last_string_value := text
@@ -302,7 +302,7 @@ when 36 then
 	yy_column := yy_column + 3
 --|#line 128 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 128")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 128")
 end
 
 				last_character := text.item(2)
@@ -312,7 +312,7 @@ when 37 then
 yy_set_line_column
 --|#line 133 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 133")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 133")
 end
 
 				last_string_value := text.substring(2, text.count - 1)
@@ -322,14 +322,14 @@ when 38 then
 	yy_column := yy_column + yy_end - yy_start - yy_more_len
 --|#line 138 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 138")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 138")
 end
 -- Ignore comments
 when 39 then
 	yy_column := yy_column + 1
 --|#line 140 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 140")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 140")
 end
 -- DO NOT REMOVE THIS!!!!! 
         -- return the character code for a character, which are reserved tokens that the parser uses
@@ -341,13 +341,13 @@ when 40 then
 yy_set_line_column
 --|#line 0 "etf_evt_scanner_def.l"
 debug ("GELEX")
-	std.error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 0")
+	std.Error.put_line ("Executing scanner user-code from file 'etf_evt_scanner_def.l' at line 0")
 end
 last_token := yyError_token
-fatal_error ("scanner jammed")
+fatal_Error ("scanner jammed")
 			else
 				last_token := yyError_token
-				fatal_error ("fatal scanner internal error: no action found")
+				fatal_Error ("fatal scanner internal Error: no action found")
 			end
 		end
 

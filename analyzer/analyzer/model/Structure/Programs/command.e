@@ -21,7 +21,7 @@ feature
 		end
 
 feature
-	name: STRING
+	--name: STRING
 	paramaters: ARRAY[TUPLE[STRING, STRING]]
 
 feature

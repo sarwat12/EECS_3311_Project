@@ -6,7 +6,7 @@ inherit
 		rename
 			make as make_parser_skeleton
 		redefine
-			report_error
+			report_Error
 		end	
 			
 	ETF_EVT_SCANNER
@@ -113,7 +113,7 @@ feature {NONE} -- Implementation
 				yyvsp1 := yyvsp1 + 1
 				if yyvsp1 >= yyvsc1 then
 					debug ("GEYACC")
-						std.error.put_line ("Resize yyvs1")
+						std.Error.put_line ("Resize yyvs1")
 					end
 					yyvsc1 := yyvsc1 + yyInitial_yyvs_size
 					yyvs1 := yyspecial_routines1.aliased_resized_area (yyvs1, yyvsc1)
@@ -123,7 +123,7 @@ feature {NONE} -- Implementation
 				yyvsp2 := yyvsp2 + 1
 				if yyvsp2 >= yyvsc2 then
 					debug ("GEYACC")
-						std.error.put_line ("Resize yyvs2")
+						std.Error.put_line ("Resize yyvs2")
 					end
 					yyvsc2 := yyvsc2 + yyInitial_yyvs_size
 					yyvs2 := yyspecial_routines2.aliased_resized_area (yyvs2, yyvsc2)
@@ -133,7 +133,7 @@ feature {NONE} -- Implementation
 				yyvsp3 := yyvsp3 + 1
 				if yyvsp3 >= yyvsc3 then
 					debug ("GEYACC")
-						std.error.put_line ("Resize yyvs3")
+						std.Error.put_line ("Resize yyvs3")
 					end
 					yyvsc3 := yyvsc3 + yyInitial_yyvs_size
 					yyvs3 := yyspecial_routines3.aliased_resized_area (yyvs3, yyvsc3)
@@ -143,7 +143,7 @@ feature {NONE} -- Implementation
 				yyvsp4 := yyvsp4 + 1
 				if yyvsp4 >= yyvsc4 then
 					debug ("GEYACC")
-						std.error.put_line ("Resize yyvs4")
+						std.Error.put_line ("Resize yyvs4")
 					end
 					yyvsc4 := yyvsc4 + yyInitial_yyvs_size
 					yyvs4 := yyspecial_routines4.aliased_resized_area (yyvs4, yyvsc4)
@@ -151,16 +151,16 @@ feature {NONE} -- Implementation
 				yyspecial_routines4.force (yyvs4, last_string_value, yyvsp4)
 			else
 				debug ("GEYACC")
-					std.error.put_string ("Error in parser: not a token type: ")
-					std.error.put_integer (yytypes2.item (yychar1))
-					std.error.put_new_line
+					std.Error.put_string ("Error in parser: not a token type: ")
+					std.Error.put_integer (yytypes2.item (yychar1))
+					std.Error.put_new_line
 				end
 				abort
 			end
 		end
 
-	yy_push_error_value
-			-- Push semantic value associated with token 'error'
+	yy_push_Error_value
+			-- Push semantic value associated with token 'Error'
 			-- on top of corresponding value stack.
 		local
 			yyval1: detachable ANY
@@ -168,7 +168,7 @@ feature {NONE} -- Implementation
 			yyvsp1 := yyvsp1 + 1
 			if yyvsp1 >= yyvsc1 then
 				debug ("GEYACC")
-					std.error.put_line ("Resize yyvs1")
+					std.Error.put_line ("Resize yyvs1")
 				end
 				yyvsc1 := yyvsc1 + yyInitial_yyvs_size
 				yyvs1 := yyspecial_routines1.aliased_resized_area (yyvs1, yyvsc1)
@@ -205,9 +205,9 @@ feature {NONE} -- Implementation
 				yyvsp10 := yyvsp10 - 1
 			else
 				debug ("GEYACC")
-					std.error.put_string ("Error in parser: unknown type id: ")
-					std.error.put_integer (yy_type_id)
-					std.error.put_new_line
+					std.Error.put_string ("Error in parser: unknown type id: ")
+					std.Error.put_integer (yy_type_id)
+					std.Error.put_new_line
 				end
 				abort
 			end
@@ -236,7 +236,7 @@ feature {NONE} -- Semantic actions
 when 1 then
 --|#line 84 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 84")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 84")
 end
 
 	  event_trace := yyvs5.item (yyvsp5)
@@ -247,7 +247,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp5 := yyvsp5 -1
 	if yyvsp1 >= yyvsc1 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs1")
+			std.Error.put_line ("Resize yyvs1")
 		end
 		yyvsc1 := yyvsc1 + yyInitial_yyvs_size
 		yyvs1 := yyspecial_routines1.aliased_resized_area (yyvs1, yyvsc1)
@@ -257,7 +257,7 @@ end
 when 2 then
 --|#line 91 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 91")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 91")
 end
 
 		  create {ARRAY[TUPLE[name: STRING; args: ARRAY[ETF_EVT_ARG]]]} yyval5.make_empty
@@ -267,7 +267,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp5 := yyvsp5 + 1
 	if yyvsp5 >= yyvsc5 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs5")
+			std.Error.put_line ("Resize yyvs5")
 		end
 		yyvsc5 := yyvsc5 + yyInitial_yyvs_size
 		yyvs5 := yyspecial_routines5.aliased_resized_area (yyvs5, yyvsc5)
@@ -277,7 +277,7 @@ end
 when 3 then
 --|#line 96 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 96")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 96")
 end
 
 		  yyval5 := yyvs5.item (yyvsp5)
@@ -292,7 +292,7 @@ end
 when 4 then
 --|#line 105 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 105")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 105")
 end
 
 	  current_evt := yyvs4.item (yyvsp4)
@@ -305,7 +305,7 @@ end
 when 5 then
 --|#line 113 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 113")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 113")
 end
 
 		create yyval6.make_empty
@@ -315,7 +315,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp6 := yyvsp6 + 1
 	if yyvsp6 >= yyvsc6 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs6")
+			std.Error.put_line ("Resize yyvs6")
 		end
 		yyvsc6 := yyvsc6 + yyInitial_yyvs_size
 		yyvs6 := yyspecial_routines6.aliased_resized_area (yyvs6, yyvsc6)
@@ -325,7 +325,7 @@ end
 when 6 then
 --|#line 118 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 118")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 118")
 end
 
 		yyval6 := yyvs6.item (yyvsp6)
@@ -338,14 +338,14 @@ end
 when 7 then
 --|#line 124 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 124")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 124")
 end
 
 		create yyval6.make_empty	
 		if attached evt_param_types[current_evt] as evt then
 			-- new conditional: 2019/10/12
 			if evt.is_empty then
-				report_error("Too many arguments passed for %"" + current_evt.out + "%"")
+				report_Error("Too many arguments passed for %"" + current_evt.out + "%"")
 			else
 				current_param := evt.first
 				yyval6.force(value_to_int_or_real (yyvs7.item (yyvsp7), current_param), yyval6.upper + 1)
@@ -361,7 +361,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp7 := yyvsp7 -1
 	if yyvsp6 >= yyvsc6 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs6")
+			std.Error.put_line ("Resize yyvs6")
 		end
 		yyvsc6 := yyvsc6 + yyInitial_yyvs_size
 		yyvs6 := yyspecial_routines6.aliased_resized_area (yyvs6, yyvsc6)
@@ -371,13 +371,13 @@ end
 when 8 then
 --|#line 141 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 141")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 141")
 end
 
 	    yyval6 := yyvs6.item (yyvsp6) 
 		if attached evt_param_types[current_evt] as evt then
 			if yyvs6.item (yyvsp6).count + 1 > evt.count then -- too many arguments being passed
-				report_error("Too many arguments passed for %"" + current_evt.out + "%"")
+				report_Error("Too many arguments passed for %"" + current_evt.out + "%"")
 			else
 				current_param := evt[yyvs6.item (yyvsp6).count + 1]
 				yyval6.force(value_to_int_or_real (yyvs7.item (yyvsp7), current_param), yyval6.upper + 1)
@@ -396,7 +396,7 @@ end
 when 9 then
 --|#line 158 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 158")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 158")
 end
 
 yyval7 := yyvs8.item (yyvsp8) 
@@ -406,7 +406,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp8 := yyvsp8 -1
 	if yyvsp7 >= yyvsc7 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs7")
+			std.Error.put_line ("Resize yyvs7")
 		end
 		yyvsc7 := yyvsc7 + yyInitial_yyvs_size
 		yyvs7 := yyspecial_routines7.aliased_resized_area (yyvs7, yyvsc7)
@@ -416,7 +416,7 @@ end
 when 10 then
 --|#line 160 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 160")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 160")
 end
 
 yyval7 := yyvs9.item (yyvsp9) 
@@ -426,7 +426,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp9 := yyvsp9 -1
 	if yyvsp7 >= yyvsc7 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs7")
+			std.Error.put_line ("Resize yyvs7")
 		end
 		yyvsc7 := yyvsc7 + yyInitial_yyvs_size
 		yyvs7 := yyspecial_routines7.aliased_resized_area (yyvs7, yyvsc7)
@@ -436,7 +436,7 @@ end
 when 11 then
 --|#line 163 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 163")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 163")
 end
 
 yyval8 := yyvs8.item (yyvsp8) 
@@ -447,7 +447,7 @@ end
 when 12 then
 --|#line 165 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 165")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 165")
 end
 
 	  	create {ETF_TUPLE_ARG} yyval8.make(yyvs10.item (yyvsp10))
@@ -459,7 +459,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp10 := yyvsp10 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -469,7 +469,7 @@ end
 when 13 then
 --|#line 171 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 171")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 171")
 end
 
 		create {ETF_BOOL_ARG} yyval8.make(true) 
@@ -481,7 +481,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp1 := yyvsp1 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -491,7 +491,7 @@ end
 when 14 then
 --|#line 177 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 177")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 177")
 end
 
 		create {ETF_BOOL_ARG} yyval8.make(false) 
@@ -503,7 +503,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp1 := yyvsp1 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -513,7 +513,7 @@ end
 when 15 then
 --|#line 182 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 182")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 182")
 end
 
 		create {ETF_CHAR_ARG} yyval8.make(last_character)
@@ -525,7 +525,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp1 := yyvsp1 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -535,7 +535,7 @@ end
 when 16 then
 --|#line 187 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 187")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 187")
 end
 
 		create {ETF_STR_ARG}  yyval8.make(last_string_value) 
@@ -547,7 +547,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp1 := yyvsp1 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -557,7 +557,7 @@ end
 when 17 then
 --|#line 192 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 192")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 192")
 end
 
 		create {ETF_VALUE_ARG} yyval8.make(last_string_value)
@@ -568,7 +568,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp2 := yyvsp2 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -578,7 +578,7 @@ end
 when 18 then
 --|#line 196 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 196")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 196")
 end
 
 		create {ETF_VALUE_ARG} yyval8.make("-" + last_string_value)
@@ -590,7 +590,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp2 := yyvsp2 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -600,7 +600,7 @@ end
 when 19 then
 --|#line 200 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 200")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 200")
 end
 
 		create {ETF_VALUE_ARG} yyval8.make(last_string_value)
@@ -611,7 +611,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp3 := yyvsp3 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -621,7 +621,7 @@ end
 when 20 then
 --|#line 204 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 204")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 204")
 end
 
 		create {ETF_VALUE_ARG} yyval8.make("-" + last_string_value)
@@ -633,7 +633,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp3 := yyvsp3 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -643,14 +643,14 @@ end
 when 21 then
 --|#line 208 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 208")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 208")
 end
 
 		if enum_items.has_key (yyvs4.item (yyvsp4)) then
 			create {ETF_ENUM_INT_ARG} yyval8.make (enum_items[yyvs4.item (yyvsp4)])
 			yyval8.set_src_out (yyvs4.item (yyvsp4))
 		else
-			report_error ("Unknown identifier " + yyvs4.item (yyvsp4))
+			report_Error ("Unknown identifier " + yyvs4.item (yyvsp4))
 			create {ETF_ENUM_INT_ARG} yyval8.make (-1) -- just to make void safety work!
 		end
 	  
@@ -660,7 +660,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp4 := yyvsp4 -1
 	if yyvsp8 >= yyvsc8 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs8")
+			std.Error.put_line ("Resize yyvs8")
 		end
 		yyvsc8 := yyvsc8 + yyInitial_yyvs_size
 		yyvs8 := yyspecial_routines8.aliased_resized_area (yyvs8, yyvsc8)
@@ -670,7 +670,7 @@ end
 when 22 then
 --|#line 220 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 220")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 220")
 end
 
 		create {ETF_ARRAY_ARG} yyval9.make(yyvs10.item (yyvsp10)) 
@@ -682,7 +682,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp10 := yyvsp10 -1
 	if yyvsp9 >= yyvsc9 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs9")
+			std.Error.put_line ("Resize yyvs9")
 		end
 		yyvsc9 := yyvsc9 + yyInitial_yyvs_size
 		yyvs9 := yyspecial_routines9.aliased_resized_area (yyvs9, yyvsc9)
@@ -692,7 +692,7 @@ end
 when 23 then
 --|#line 227 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 227")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 227")
 end
 
 create yyval10.make_empty 
@@ -701,7 +701,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp10 := yyvsp10 + 1
 	if yyvsp10 >= yyvsc10 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs10")
+			std.Error.put_line ("Resize yyvs10")
 		end
 		yyvsc10 := yyvsc10 + yyInitial_yyvs_size
 		yyvs10 := yyspecial_routines10.aliased_resized_area (yyvs10, yyvsc10)
@@ -711,7 +711,7 @@ end
 when 24 then
 --|#line 230 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 230")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 230")
 end
 
 yyval10 := yyvs10.item (yyvsp10) 
@@ -722,7 +722,7 @@ end
 when 25 then
 --|#line 234 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 234")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 234")
 end
 
 	    yyval10 := <<yyvs8.item (yyvsp8)>>
@@ -733,7 +733,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp8 := yyvsp8 -1
 	if yyvsp10 >= yyvsc10 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs10")
+			std.Error.put_line ("Resize yyvs10")
 		end
 		yyvsc10 := yyvsc10 + yyInitial_yyvs_size
 		yyvs10 := yyspecial_routines10.aliased_resized_area (yyvs10, yyvsc10)
@@ -743,7 +743,7 @@ end
 when 26 then
 --|#line 239 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 239")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 239")
 end
 
 		yyval10 := yyvs10.item (yyvsp10)
@@ -758,7 +758,7 @@ end
 when 27 then
 --|#line 246 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 246")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 246")
 end
 
 create yyval10.make_empty 
@@ -767,7 +767,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp10 := yyvsp10 + 1
 	if yyvsp10 >= yyvsc10 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs10")
+			std.Error.put_line ("Resize yyvs10")
 		end
 		yyvsc10 := yyvsc10 + yyInitial_yyvs_size
 		yyvs10 := yyspecial_routines10.aliased_resized_area (yyvs10, yyvsc10)
@@ -777,7 +777,7 @@ end
 when 28 then
 --|#line 249 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 249")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 249")
 end
 
 yyval10 := yyvs10.item (yyvsp10) 
@@ -788,7 +788,7 @@ end
 when 29 then
 --|#line 253 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 253")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 253")
 end
 
 	    yyval10 := <<yyvs8.item (yyvsp8)>>
@@ -799,7 +799,7 @@ if yy_parsing_status >= yyContinue then
 	yyvsp8 := yyvsp8 -1
 	if yyvsp10 >= yyvsc10 then
 		debug ("GEYACC")
-			std.error.put_line ("Resize yyvs10")
+			std.Error.put_line ("Resize yyvs10")
 		end
 		yyvsc10 := yyvsc10 + yyInitial_yyvs_size
 		yyvs10 := yyspecial_routines10.aliased_resized_area (yyvs10, yyvsc10)
@@ -809,7 +809,7 @@ end
 when 30 then
 --|#line 258 "ETF_evt_trace_parser_def.y"
 debug ("GEYACC")
-	std.error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 258")
+	std.Error.put_line ("Executing parser user-code from file 'ETF_evt_trace_parser_def.y' at line 258")
 end
 
 		yyval10 := yyvs10.item (yyvsp10)
@@ -823,24 +823,24 @@ if yy_parsing_status >= yyContinue then
 end
 				else
 					debug ("GEYACC")
-						std.error.put_string ("Error in parser: unknown rule id: ")
-						std.error.put_integer (yy_act)
-						std.error.put_new_line
+						std.Error.put_string ("Error in parser: unknown rule id: ")
+						std.Error.put_integer (yy_act)
+						std.Error.put_new_line
 					end
 					abort
 				end
 		end
 
-	yy_do_error_action (yy_act: INTEGER)
-			-- Execute error action.
+	yy_do_Error_action (yy_act: INTEGER)
+			-- Execute Error action.
 		do
 			inspect yy_act
 			when 40 then
 					-- End-of-file expected action.
-				report_eof_expected_error
+				report_eof_expected_Error
 			else
 					-- Default action.
-				report_error ("parse error")
+				report_Error ("parse Error")
 			end
 		end
 
@@ -1153,7 +1153,7 @@ feature -- create
 			make_parser_skeleton
 			make_scanner
 			create event_trace.make_empty	
-			last_error := ""
+			last_Error := ""
 			evt_param_types := param_types
 			enum_items := items
 			current_evt := ""
@@ -1163,7 +1163,7 @@ feature -- create
 feature -- access  
 
 	event_trace : ARRAY[TUPLE[name: STRING; args: ARRAY[ETF_EVT_ARG]]]
-	last_error : STRING
+	last_Error : STRING
 	evt_param_types : HASH_TABLE[LINKED_LIST[ETF_PARAM_TYPE], STRING]
 	enum_items : HASH_TABLE[INTEGER, STRING]
 
@@ -1257,7 +1257,7 @@ feature -- context
 				if val_arg.value.precise_out.is_integer_32 then
 					create {ETF_INT_ARG} Result.make(val_arg.value.precise_out.to_integer_32)
 				else
-					report_error ("Invalid number for 32-bit integer " + val_arg.value.precise_out)
+					report_Error ("Invalid number for 32-bit integer " + val_arg.value.precise_out)
 					Result := arg
 				end 
 			else
@@ -1271,7 +1271,7 @@ feature -- context
 				if val_arg.value.precise_out.is_integer_64 then
 					create {ETF_INT_64_ARG} Result.make(val_arg.value.precise_out.to_integer_64)
 				else
-					report_error ("Invalid number for 64-bit integer " + val_arg.value.precise_out)
+					report_Error ("Invalid number for 64-bit integer " + val_arg.value.precise_out)
 					Result := arg
 				end 
 			else
@@ -1285,7 +1285,7 @@ feature -- context
 				if val_arg.value.precise_out.is_real_64 then
 					create {ETF_REAL_ARG} Result.make(val_arg.value.precise_out.to_real_64)
 				else
-					report_error ("Invalid number for double-precision, real value " + val_arg.value.precise_out)
+					report_Error ("Invalid number for double-precision, real value " + val_arg.value.precise_out)
 					Result := arg
 				end 
 			else
@@ -1295,9 +1295,9 @@ feature -- context
 
 feature -- parsing
 
-	report_error(a_message: STRING)
+	report_Error(a_message: STRING)
 		do
-			last_error := a_message + " (Line " + line.out + ", " + "Column " + column.out + ")" 
+			last_Error := a_message + " (Line " + line.out + ", " + "Column " + column.out + ")" 
 		end
 
 	parse_string(str :STRING)
@@ -1326,7 +1326,7 @@ feature -- parsing
 				parse
 				a_file.close
 			else
-				std.error.put_string ("event declaration parser: cannot read %'"+filename+"%'%N")
+				std.Error.put_string ("event declaration parser: cannot read %'"+filename+"%'%N")
 			end
 		end
 	

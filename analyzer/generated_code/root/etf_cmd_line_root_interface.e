@@ -37,20 +37,20 @@ feature {NONE} -- init
 			if argument_count = 1 then
 			  msg := usage_msg (cmd)
 			else
-			  msg := error (wrong_arguments_for_mode(flag), cmd)
+			  msg := Error (wrong_arguments_for_mode(flag), cmd)
 			end
 		  elseif flag ~ "-version" then
 			if argument_count = 1 then
 			  msg := version_msg
 			else
-			  msg := error (wrong_arguments_for_mode(flag), cmd)
+			  msg := Error (wrong_arguments_for_mode(flag), cmd)
 			end
 		  -- %%%%%%%%%%%%%%%% GUI Mode %%%%%%%%%%%%%%%%%
 		  elseif flag ~ "-g" then
 		  	if argument_count = 1 then
 			  make_from_gui_root
 			else
-			  msg := error (wrong_arguments_for_mode(flag), cmd)
+			  msg := Error (wrong_arguments_for_mode(flag), cmd)
 			end
 		  -- %%%%%%%%%%%% Interactive Mode %%%%%%%%%%%%%
 		  elseif flag ~ "-i" then
@@ -58,7 +58,7 @@ feature {NONE} -- init
 		      is_init := true
 		      handle_interactive_mode
 		    else
-		      msg := error (wrong_arguments_for_mode(flag), cmd)
+		      msg := Error (wrong_arguments_for_mode(flag), cmd)
 		  	end
 		  -- %%%%%%%%%%%%%%%% Batch Mode %%%%%%%%%%%%%%%%
 		  elseif flag ~ "-b" then
@@ -72,7 +72,7 @@ feature {NONE} -- init
 		  	  is_init := true
 			  -- check that input file exists
 			  create input_file.read_text_from (input_path)
-		  	  if NOT input_file.error then
+		  	  if NOT input_file.Error then
 		  	  	-- check that output file does NOT exist
 		  	  	create output_file.make_with_name (output_path)
 		  	  	if NOT output_file.exists then
@@ -82,10 +82,10 @@ feature {NONE} -- init
 				  msg := "Error: output file " + output_path + " already exists!"
 		  	  	end
 		  	  else
-		  	  	msg := input_file.error_string
+		  	  	msg := input_file.Error_string
 		  	  end
 		    else
-		      msg := error (wrong_arguments_for_mode(flag), cmd)
+		      msg := Error (wrong_arguments_for_mode(flag), cmd)
 		    end
 		  -- %%%%%%%%%%%%%%%% Window Mode %%%%%%%%%%%%%%%%
 		  elseif flag ~ "-w" OR flag ~ "-l" then
@@ -114,10 +114,10 @@ feature {NONE} -- init
 			    end
 		  	  end
 
-		  	  if window_spec_error.is_empty then
+		  	  if window_spec_Error.is_empty then
 				-- check: input file exists
   	            create input_file.read_text_from(input_path)
-  	            if NOT input_file.error then
+  	            if NOT input_file.Error then
   	          	  if NOT output_path.is_empty then
 				    -- check: output file does NOT exist
   	  	            create output_file.make_with_name (output_path)
@@ -138,21 +138,21 @@ feature {NONE} -- init
 		            handle_window_mode (input_file)
   	          	  end
   	            else
-  	          	  msg := input_file.error_string
+  	          	  msg := input_file.Error_string
   	            end
 			  else
-			  	msg := window_spec_error
+			  	msg := window_spec_Error
 		  	  end
 			else
-			  msg := error (wrong_arguments_for_mode(flag), cmd)
+			  msg := Error (wrong_arguments_for_mode(flag), cmd)
 		  	end
 		  -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		  else -- invalid mode is specified
-		  	msg := error (invalid_flag_msg (flag), cmd)
+		  	msg := Error (invalid_flag_msg (flag), cmd)
 		  end
 		-- ===================================================
 		else -- no arguments are specified
-		  msg := error (flag_missing_msg, cmd)
+		  msg := Error (flag_missing_msg, cmd)
 		end
 
 		-- ===================================================
@@ -166,7 +166,7 @@ feature {NONE} -- init
 
 	initialize_attributes
 		do
-			create window_spec_error.make_empty
+			create window_spec_Error.make_empty
 			create exec_log.make_empty
 			create context_state_from_exec_log.make_empty
 		end
@@ -181,7 +181,7 @@ feature {NONE} -- message queries
 			Result := "Run '" + cmd + " -help' to see more details"
 		end
 
-	error (err_msg: STRING; cmd: STRING): STRING
+	Error (err_msg: STRING; cmd: STRING): STRING
 		do
 			Result := err_msg + "%N"
 			Result.append (ref_msg (cmd))
@@ -283,7 +283,7 @@ feature {NONE} -- message queries
 
 feature {NONE} -- attributes
 
-	window_spec_error: STRING
+	window_spec_Error: STRING
 
 	-- used to make sure 'init' is displayed only once	
 	is_init : BOOLEAN
@@ -332,11 +332,11 @@ feature {NONE} -- mode handling procedures
 			create ui.make
 	      	create input.make_without_running(user_input, ui)
 	      	create output.make
-			input.on_error.attach (agent output.log_error)
+			input.on_Error.attach (agent output.log_Error)
 
 			input.parse_and_validate_input_string
-	      	if input.etf_error then
-				exec_log := output.error_message + "%N"
+	      	if input.etf_Error then
+				exec_log := output.Error_message + "%N"
 			else
 				sys.execute_without_log (user_input)
 				exec_log := sys.output.model_state
@@ -355,14 +355,14 @@ feature {NONE} -- mode handling procedures
 		  -- check 1: 'input' file exists and is readable
 		  create input_file.read_text_from (input_path)
 
-		  if NOT input_file.error then
+		  if NOT input_file.Error then
 	      	-- tasks of syntax check and event type validation
 	      	-- are delegated to 'sys : ETF_SOFTWARE_OPERATION'
 	      	input_file.remove_comment_lines
 		    exec (input_file.item)
 		    Result := exec_log
 		  else
-		    Result := input_file.error_string
+		    Result := input_file.Error_string
 		  end
 	  end
 
@@ -495,20 +495,20 @@ feature {NONE} -- auxiliary procedures
 			  then
 			    -- check 4: start of window <= 0 ==> end of window <= 0
 			    if start_of_window <= 0 and end_of_window > 0 then
-				  msg := error(neg_start_pos_end_window_msg, cmd)
+				  msg := Error(neg_start_pos_end_window_msg, cmd)
 				else
-				  -- no error on the window spec!
+				  -- no Error on the window spec!
 				end
 		  	  else
-				msg := error(invalid_window_msg, cmd)
+				msg := Error(invalid_window_msg, cmd)
 		  	  end
 			else
-			  msg := error (end_of_window_not_valid, cmd)
+			  msg := Error (end_of_window_not_valid, cmd)
 		  	end
 		  else
-		  	msg := error (start_of_window_not_valid, cmd)
+		  	msg := Error (start_of_window_not_valid, cmd)
 		  end
-		  window_spec_error := msg
+		  window_spec_Error := msg
 		end
 
 	batch_file_mode_make_a_step(
@@ -591,8 +591,8 @@ feature {NONE} -- auxiliary procedures
 			create exec_log.make_empty
 		    sys.execute (input_cmds, is_init)
 
-		    if sys.error then
-		      exec_log := sys.output.error_message + "%N"
+		    if sys.Error then
+		      exec_log := sys.output.Error_message + "%N"
 		    else
 		      exec_log := sys.output.output
 		      is_init := false
@@ -608,7 +608,7 @@ feature {NONE} -- auxiliary procedures
 			create exec_log.make_empty
 		    sys.execute_without_log (input_cmds)
 
-		    if NOT sys.error then
+		    if NOT sys.Error then
 		      is_init := false
 		    end
 		end

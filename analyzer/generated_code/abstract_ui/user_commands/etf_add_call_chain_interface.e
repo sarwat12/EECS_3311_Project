@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "add_call_chain(" + etf_event_argument_out("add_call_chain", "chain", chain) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

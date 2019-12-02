@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "add_query(" + etf_event_argument_out("add_query", "cn", cn) + "," + etf_event_argument_out("add_query", "fn", fn) + "," + etf_event_argument_out("add_query", "ps", ps) + "," + etf_event_argument_out("add_query", "rt", rt) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

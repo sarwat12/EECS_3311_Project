@@ -7,4 +7,7 @@ note
 deferred class
 	FEATURE_DECLARATION
 
+feature
+	name: STRING
+
 end

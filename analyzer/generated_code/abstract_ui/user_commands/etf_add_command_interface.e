@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "add_command(" + etf_event_argument_out("add_command", "cn", cn) + "," + etf_event_argument_out("add_command", "fn", fn) + "," + etf_event_argument_out("add_command", "ps", ps) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

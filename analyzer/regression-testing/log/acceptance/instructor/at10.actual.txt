@@ -99,6 +99,8 @@
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
+  Routine currently being implemented: {A}.q1
+  Assignment being specified: Result := ?
 ->generate_java_code
 
   Number of classes being specified: 2
@@ -139,7 +141,7 @@
       Number of queries: 0
       Number of commands: 0
 ->type_check
-  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Status: Error (An assignment instruction is currently being specified for routine q1 in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
@@ -151,8 +153,10 @@
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
+  Routine currently being implemented: {A}.q1
+  Assignment being specified: Result := ?
 ->add_attribute("B","a","A")
-  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Status: Error (An assignment instruction is currently being specified for routine q1 in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
@@ -164,6 +168,8 @@
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
+  Routine currently being implemented: {A}.q1
+  Assignment being specified: Result := ?
 ->generate_java_code
 
   Number of classes being specified: 2
@@ -178,7 +184,7 @@
       Number of queries: 0
       Number of commands: 0
 ->add_command("B","c1",<<>>)
-  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Status: Error (An assignment instruction is currently being specified for routine q1 in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
@@ -190,6 +196,8 @@
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
+  Routine currently being implemented: {A}.q1
+  Assignment being specified: Result := ?
 ->generate_java_code
 
   Number of classes being specified: 2
@@ -204,7 +212,7 @@
       Number of queries: 0
       Number of commands: 0
 ->add_assignment_instruction("B","c1","a")
-  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Status: Error (An assignment instruction is currently being specified for routine q1 in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
@@ -216,6 +224,8 @@
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
+  Routine currently being implemented: {A}.q1
+  Assignment being specified: Result := ?
 ->generate_java_code
 
   Number of classes being specified: 2
@@ -256,7 +266,7 @@
       Number of queries: 0
       Number of commands: 0
 ->type_check
-  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Status: Error (An assignment instruction is currently being specified for routine q1 in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
@@ -268,3 +278,5 @@
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
+  Routine currently being implemented: {A}.q1
+  Assignment being specified: Result := ?

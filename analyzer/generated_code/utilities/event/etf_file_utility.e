@@ -12,9 +12,9 @@ create
 
 feature -- attributes
 
-	error: BOOLEAN
+	Error: BOOLEAN
 
-	error_string: STRING
+	Error_string: STRING
 
 	items: LIST[STRING]
 			-- file as a list of strings, separated by new lines
@@ -33,25 +33,25 @@ feature -- attributes
 feature {NONE} -- creates
 	read_text_from (a_path: STRING)
  			-- read file at `a_path'
- 			-- error is false if there are errors reading the file
- 			-- item is the text in the file if there are no errors
- 			-- error_string is the error condition
+ 			-- Error is false if there are Errors reading the file
+ 			-- item is the text in the file if there are no Errors
+ 			-- Error_string is the Error condition
 		local
 			l_file: PLAIN_TEXT_FILE
 			line: STRING
 		do
 			create {LINKED_LIST[STRING]} items.make
-			create error_string.make_empty
+			create Error_string.make_empty
 			create l_file.make_with_name (a_path)
 				-- Perform checks until we can make
 				-- a real attempt to open the file.
 			if not l_file.exists then
-				error := true
-				error_string := "error: '" + a_path + "' does not exist"
+				Error := true
+				Error_string := "Error: '" + a_path + "' does not exist"
 			else
 				if not l_file.is_readable then
-					error := True
-					error_string := "error: '" + a_path + "' is not readable"
+					Error := True
+					Error_string := "Error: '" + a_path + "' is not readable"
 				else
 					from
 						l_file.open_read
@@ -66,8 +66,8 @@ feature {NONE} -- creates
 				end
 			end
 		ensure
-			error implies items.count = 0 and error_string.count > 0
-			not error implies error_string.count = 0
+			Error implies items.count = 0 and Error_string.count > 0
+			not Error implies Error_string.count = 0
 		end
 
 feature -- Commands

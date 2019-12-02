@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "add_assignment_instruction(" + etf_event_argument_out("add_assignment_instruction", "cn", cn) + "," + etf_event_argument_out("add_assignment_instruction", "fn", fn) + "," + etf_event_argument_out("add_assignment_instruction", "n", n) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

@@ -33,6 +33,8 @@
       Number of queries: 0
       Number of commands: 1
         + set_i
+  Routine currently being implemented: {A}.set_i
+  Assignment being specified: i := ?
 ->multiplication
 
   Number of classes being specified: 1
@@ -79,7 +81,7 @@
       Number of commands: 1
         + set_i
 ->add_assignment_instruction("A","set_i","i")
-  Status: ERROR (An assignment instruction is currently being specified for routine set_i in class A).
+  Status: Error (An assignment instruction is currently being specified for routine set_i in class A).
   Number of classes being specified: 1
     A
       Number of attributes: 1
@@ -87,6 +89,8 @@
       Number of queries: 0
       Number of commands: 1
         + set_i
+  Routine currently being implemented: {A}.set_i
+  Assignment being specified: i := ?
 ->addition
 
   Number of classes being specified: 1
@@ -133,7 +137,7 @@
       Number of commands: 1
         + set_i
 ->type_check
-  Status: ERROR (An assignment instruction is currently being specified for routine set_i in class A).
+  Status: Error (An assignment instruction is currently being specified for routine set_i in class A).
   Number of classes being specified: 1
     A
       Number of attributes: 1
@@ -141,6 +145,8 @@
       Number of queries: 0
       Number of commands: 1
         + set_i
+  Routine currently being implemented: {A}.set_i
+  Assignment being specified: i := ?
 ->generate_java_code
 
   Number of classes being specified: 1

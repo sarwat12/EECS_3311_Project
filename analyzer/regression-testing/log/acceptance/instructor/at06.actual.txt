@@ -31,12 +31,11 @@
       Number of queries: 0
       Number of commands: 0
 ->add_query("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"int")
-  Status: OK.
+  Status: Error (ca is already an existing feature name in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 0
-      Number of queries: 1
-        + ca: int
+      Number of queries: 0
       Number of commands: 1
         + ca
     B
@@ -48,8 +47,7 @@
   Number of classes being specified: 2
     A
       Number of attributes: 0
-      Number of queries: 2
-        + ca: int
+      Number of queries: 1
         + cq: C
       Number of commands: 1
         + ca
@@ -63,8 +61,7 @@
     A
       Number of attributes: 1
         + att: C
-      Number of queries: 2
-        + ca: int
+      Number of queries: 1
         + cq: C
       Number of commands: 1
         + ca
@@ -73,15 +70,13 @@
       Number of queries: 0
       Number of commands: 0
 ->add_query("A","ca",<<["x", "INTEGER"], ["y", "BOOLEAN"], ["z", "A"]>>,"C")
-  Status: OK.
+  Status: Error (ca is already an existing feature name in class A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
         + att: C
-      Number of queries: 3
-        + ca: int
+      Number of queries: 1
         + cq: C
-        + ca: C
       Number of commands: 1
         + ca
     B

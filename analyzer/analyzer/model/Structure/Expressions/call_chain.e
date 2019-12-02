@@ -14,9 +14,10 @@ create
 	make
 
 feature
-	make
+	make(s: STRING)
 		do
 			create strings.make_empty
+			strings.force (s, strings.count + 1)
 		end
 
 feature
@@ -26,6 +27,14 @@ feature
 	accept(v: VISITOR)
 		do
 			v.visit_call_chain (Current)
+		end
+
+	chain: STRING
+		do
+			create Result.make_empty
+			across strings as s loop
+				Result.append(s.item)
+			end
 		end
 
 end

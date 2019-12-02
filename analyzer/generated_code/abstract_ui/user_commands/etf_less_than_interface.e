@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "less_than"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

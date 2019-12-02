@@ -13,7 +13,7 @@ create
 feature -- Queries
 	model: ANALYZER
 
-	error: BOOLEAN
+	Error: BOOLEAN
 
 	status_message: STRING
 
@@ -40,35 +40,35 @@ feature -- Constructor
 	      	create input.make_without_running("dummy", ui)
 	      	create output.make
 	      	output.model.reset
-			input.on_error.attach (agent output.log_error)
+			input.on_Error.attach (agent output.log_Error)
 
 			create {LINKED_LIST[STRING]} history.make
-			error := FALSE
+			Error := FALSE
 			create status_message.make_from_string (man_page)
 			create output_message.make_empty
 		end
 
 	execute_cmd (cmd: STRING)
 			-- Execute 'cmd'.
-			-- Set 'error_message' or 'output_message', but not both.
+			-- Set 'Error_message' or 'output_message', but not both.
 		do
 			if cmd ~ "man" then
-				error := FALSE
+				Error := FALSE
 				create status_message.make_from_string (man_page)
 				create output_message.make_empty
 			else
 				create input.make_without_running(cmd, ui)
-				input.on_error.attach (agent output.log_error)
+				input.on_Error.attach (agent output.log_Error)
 				input.parse_and_validate_input_string
-				if input.etf_error then
-					error := TRUE
-					create status_message.make_from_string (output.error_message)
+				if input.etf_Error then
+					Error := TRUE
+					create status_message.make_from_string (output.Error_message)
 					status_message.prepend ("Command entered: " + cmd + "%N")
 					-- 'output_message' is retained
 				else
 					history.extend (cmd)
 					sys.execute_without_log (cmd)
-					error := FALSE
+					Error := FALSE
 					create status_message.make_empty
 					create output_message.make_from_string (output.model_state)
 				end
@@ -132,5 +132,5 @@ feature -- Constructor
 
 invariant
 	err_msg_set:
-		error implies not status_message.is_empty
+		Error implies not status_message.is_empty
 end

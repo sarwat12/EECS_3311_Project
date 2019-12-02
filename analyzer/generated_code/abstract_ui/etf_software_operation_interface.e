@@ -31,61 +31,61 @@ feature -- attributes
 	input			: ETF_INPUT_HANDLER
 	output			: ETF_CMD_LINE_OUTPUT_HANDLER
 	dummy_command	: STRING = ""
-	error			: BOOLEAN
+	Error			: BOOLEAN
 
 feature -- Commands
 
 	execute(cmds : STRING; is_init: BOOLEAN)
 			-- Parse input string `cmds' as a list of commands
-			-- If no input errors,
+			-- If no input Errors,
 			-- 		then execute commands and log to 'output'
 			-- 		note. when 'is_init', log the initial state
-			-- If errors,
-			-- 		then report errors to 'output'
+			-- If Errors,
+			-- 		then report Errors to 'output'
 		do
 			initialize_attributes
 
 		    -- attach output handler log
 			ui.on_change.attach (agent output.log_command)
 
-		    -- create an input parser and attach error output handler
+		    -- create an input parser and attach Error output handler
 			create input.make_without_running(cmds, ui)
-			input.on_error.attach (agent output.log_error)
+			input.on_Error.attach (agent output.log_Error)
 
 			-- parse and validate input
 			input.parse_and_validate_input_string
-			if not input.etf_error then
+			if not input.etf_Error then
 				if is_init then
 					output.log_model_state
 				end
 				ui.run_input_commands
 			else
-				error := input.etf_error
+				Error := input.etf_Error
 			end
 		end
 
 	execute_without_log(cmds : STRING)
 			-- Parse input string `cmds' as a list of commands
-			-- If no input errors,
+			-- If no input Errors,
 			-- 		then execute commands without writing to a log
-			-- If errors,
-			-- 		then report errors to 'output'
+			-- If Errors,
+			-- 		then report Errors to 'output'
 		do
 			initialize_attributes
 
 		    -- attach output handler log
 			ui.on_change.attach (agent output.log_empty)
 
-		    -- create an input parser and attach error output handler
+		    -- create an input parser and attach Error output handler
 			create input.make_without_running(cmds, ui)
-			input.on_error.attach (agent output.log_error)
+			input.on_Error.attach (agent output.log_Error)
 
 			-- parse and validate input
 			input.parse_and_validate_input_string
-			if not input.etf_error then
+			if not input.etf_Error then
 				ui.run_input_commands
 			else
-				error := input.etf_error
+				Error := input.etf_Error
 			end
 		end
 end

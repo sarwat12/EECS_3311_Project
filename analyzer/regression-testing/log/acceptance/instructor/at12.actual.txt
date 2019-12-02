@@ -81,6 +81,8 @@
         + get_balance: INTEGER
       Number of commands: 1
         + set_balance
+  Routine currently being implemented: {Account}.set_balance
+  Assignment being specified: balance := ?
 ->generate_java_code
 
   Number of classes being specified: 1
@@ -112,7 +114,7 @@
       Number of commands: 1
         + set_balance
 ->add_assignment_instruction("Account","get_balance","Result")
-  Status: ERROR (An assignment instruction is currently being specified for routine set_balance in class Account).
+  Status: Error (An assignment instruction is currently being specified for routine set_balance in class Account).
   Number of classes being specified: 1
     Account
       Number of attributes: 1
@@ -121,6 +123,8 @@
         + get_balance: INTEGER
       Number of commands: 1
         + set_balance
+  Routine currently being implemented: {Account}.set_balance
+  Assignment being specified: balance := ?
 ->generate_java_code
 
   Number of classes being specified: 1

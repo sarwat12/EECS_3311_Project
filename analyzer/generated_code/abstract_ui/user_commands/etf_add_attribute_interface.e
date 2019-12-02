@@ -24,7 +24,7 @@ feature {NONE} -- Initialization
 			then
 				out := "add_attribute(" + etf_event_argument_out("add_attribute", "cn", cn) + "," + etf_event_argument_out("add_attribute", "fn", fn) + "," + etf_event_argument_out("add_attribute", "ft", ft) + ")"
 			else
-				etf_cmd_error := True
+				etf_cmd_Error := True
 			end
 		end
 

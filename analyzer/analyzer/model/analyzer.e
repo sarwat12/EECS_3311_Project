@@ -26,6 +26,7 @@ feature {NONE} -- Initialization
 			create program.make
 			create assignment.default_create
 			assignment_instruction := FALSE
+			create specified.make_empty
 		end
 
 feature -- model attributes
@@ -33,6 +34,7 @@ feature -- model attributes
 	program: PROGRAM
 	assignment_instruction: BOOLEAN
 	assignment: TUPLE[cn: STRING; fn: STRING; vn: STRING]
+	specified: STRING
 
 feature -- model operations
 
@@ -62,10 +64,12 @@ feature -- model operations
 
 	add_assignment_instruction(cn: STRING ; fn: STRING ; n: STRING)
 		do
-
 			set_status("  Status: OK.")
 			set_asignment_instruction (TRUE)
 			assignment := [cn, fn, n]
+			specified.append ("?")
+			message.append ("%N  Routine currently being implemented: {" + assignment.cn + "}." + assignment.fn)
+			message.append ("%N  Assignment being specified: " + assignment.vn + " := " + specified)
 		end
 
 	add_call_chain(chain: ARRAY[STRING])
@@ -200,11 +204,9 @@ feature -- queries
 			end
 
 
-			if not message.is_empty then
+			if (not message.is_empty) and assignment_instruction = TRUE then
 				Result.append(message)
 				create message.make_empty
-			else
-
 			end
 
 		end
