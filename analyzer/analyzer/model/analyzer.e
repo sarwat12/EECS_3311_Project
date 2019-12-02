@@ -24,41 +24,48 @@ feature {NONE} -- Initialization
 			create message.make_empty
 			create status.make_empty
 			create program.make
+			create assignment.default_create
+			assignment_instruction := FALSE
 		end
 
 feature -- model attributes
 	start: BOOLEAN
 	program: PROGRAM
+	assignment_instruction: BOOLEAN
+	assignment: TUPLE[cn: STRING; fn: STRING; vn: STRING]
 
 feature -- model operations
 
 	add_class(cn: STRING)
 		do
 			program.add_class (cn)
-			set_status("  Status: OK.%N")
+			set_status("  Status: OK.")
 		end
 
 	add_attribute(cn: STRING ; fn: STRING ; ft: STRING)
 		do
 			program.add_attribute (cn, fn, ft)
-			set_status("  Status: OK.%N")
+			set_status("  Status: OK.")
 		end
 
 	add_command(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; ft: STRING]])
 		do
 			program.add_command (cn, fn, ps)
-			set_status("  Status: OK.%N")
+			set_status("  Status: OK.")
 		end
 
 	add_query(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; pt: STRING]] ; rt: STRING)
 		do
 			program.add_query (cn, fn, ps, rt)
-			set_status("  Status: OK.%N")
+			set_status("  Status: OK.")
 		end
 
 	add_assignment_instruction(cn: STRING ; fn: STRING ; n: STRING)
 		do
 
+			set_status("  Status: OK.")
+			set_asignment_instruction (TRUE)
+			assignment := [cn, fn, n]
 		end
 
 	add_call_chain(chain: ARRAY[STRING])
@@ -67,6 +74,11 @@ feature -- model operations
 		end
 
 	bool_value(c: BOOLEAN)
+		do
+
+		end
+
+	int_value(c: INTEGER_32)
 		do
 
 		end
@@ -87,11 +99,6 @@ feature -- model operations
 		end
 
 	greater_than
-		do
-
-		end
-
-	int_value(c: INTEGER_32)
 		do
 
 		end
@@ -172,19 +179,26 @@ feature --Error Reporting
 			message := msg
 		end
 
+	set_asignment_instruction(b: BOOLEAN)
+		do
+			assignment_instruction := b
+		end
+
 feature -- queries
 	out : STRING
 		do
 			create Result.make_empty
 
 			if start = TRUE then
-				Result.append("  Status: OK.%N")
-				Result.append("  Number of classes being specified: 0%N")
+				Result.append("  Status: OK.")
+				Result.append("%N  Number of classes being specified: 0")
 				start := FALSE
+			else
+				Result.append (status)
+				status.make_empty
+				Result.append (program.program_status)
 			end
-			Result.append (status)
-			status.make_empty
-			Result.append (program.program_status)
+
 
 			if not message.is_empty then
 				Result.append(message)

@@ -14,7 +14,11 @@ feature -- command
 	add_call_chain(chain: ARRAY[STRING])
     	do
 			-- perform some update on the model state
-			model.add_call_chain(chain)
+			if model.assignment_instruction = FALSE then
+				model.set_status ("  Status: Error (An assignment instruction is not currently being specified).")
+			else
+				model.add_call_chain (chain)
+			end
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

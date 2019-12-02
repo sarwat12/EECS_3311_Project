@@ -1,35 +1,152 @@
-
+  Status: OK.
+  Number of classes being specified: 0
 ->add_class("A")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_attribute("A","i","INTEGER")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 0
 ->add_command("A","set_i",<<["x", "INTEGER"], ["y", "INTEGER"]>>)
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->add_assignment_instruction("A","set_i","i")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->multiplication
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->addition
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->int_value(1)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->int_value(2)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->int_value(3)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->add_assignment_instruction("A","set_i","i")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine set_i in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->addition
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->add_call_chain(<<"i">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->subtraction
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->add_call_chain(<<"x">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->add_call_chain(<<"y">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine set_i in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i
 ->generate_java_code
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + i: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_i

@@ -1,15 +1,90 @@
-
+  Status: OK.
+  Number of classes being specified: 0
 ->add_class("A")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_class("B")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_command("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>)
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 1
+        + ca
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_query("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"int")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 0
+      Number of queries: 1
+        + ca: int
+      Number of commands: 1
+        + ca
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_query("A","cq",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"C")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 0
+      Number of queries: 2
+        + ca: int
+        + cq: C
+      Number of commands: 1
+        + ca
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_attribute("A","att","C")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + att: C
+      Number of queries: 2
+        + ca: int
+        + cq: C
+      Number of commands: 1
+        + ca
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_query("A","ca",<<["x", "INTEGER"], ["y", "BOOLEAN"], ["z", "A"]>>,"C")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + att: C
+      Number of queries: 3
+        + ca: int
+        + cq: C
+        + ca: C
+      Number of commands: 1
+        + ca
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0

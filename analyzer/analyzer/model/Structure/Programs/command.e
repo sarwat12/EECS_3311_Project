@@ -28,7 +28,7 @@ feature
 	command_status: STRING
 		do
 			create Result.make_empty
-			Result.append("        + " + name + "%N")
+			Result.append("%N        + " + name)
 		end
 
 end

@@ -63,9 +63,9 @@ feature
 	program_status: STRING
 		do
 			create Result.make_empty
-			Result.append ("  Number of classes being specified: " + num_classes.out + "%N")
+			Result.append ("%N  Number of classes being specified: " + num_classes.out)
 			across children as c loop
-				Result.append("    " + c.item.name + "%N")
+				Result.append("%N    " + c.item.name)
 				Result.append (c.item.class_status)
 			end
 		end

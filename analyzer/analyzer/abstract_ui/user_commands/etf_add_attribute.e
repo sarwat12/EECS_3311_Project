@@ -16,7 +16,12 @@ feature -- command
 			add_attribute_precond(cn, fn, ft)
     	do
 			-- perform some update on the model state
-			model.add_attribute(cn, fn, ft)
+			if model.assignment_instruction = TRUE then
+				model.set_status ("  Status: ERROR (An assignment instruction is currently being specified for routine "
+				+ model.assignment.fn + " in class " + model.assignment.cn + ").")
+			else
+				model.add_attribute(cn, fn, ft)
+			end
 			etf_cmd_container.on_change.notify ([Current])
     	end
 

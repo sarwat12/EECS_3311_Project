@@ -1,67 +1,296 @@
-
+  Status: OK.
+  Number of classes being specified: 0
 ->add_class("A")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_attribute("A","att","BOOLEAN")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 0
+      Number of commands: 0
 ->add_query("A","q",<<["b", "BOOLEAN"]>>,"INTEGER")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_assignment_instruction("A","q","att")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->disjunction
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_call_chain(<<"b">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->conjunction
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->less_than
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(2)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(3)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_call_chain(<<"b">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->generate_java_code
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_assignment_instruction("A","q","x")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(23)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->generate_java_code
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_assignment_instruction("A","q","Result")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_call_chain(<<"b">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->generate_java_code
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_assignment_instruction("A","q","Result")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->addition
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->conjunction
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->less_than
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(2)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(3)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->add_call_chain(<<"b">>)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->multiplication
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(5)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->int_value(7)
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->generate_java_code
 
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q in class A).
+  Number of classes being specified: 1
+    A
+      Number of attributes: 1
+        + att: BOOLEAN
+      Number of queries: 1
+        + q: INTEGER
+      Number of commands: 0

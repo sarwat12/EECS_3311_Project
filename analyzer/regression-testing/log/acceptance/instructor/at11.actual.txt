@@ -1,17 +1,76 @@
-
+  Status: OK.
+  Number of classes being specified: 0
 ->add_class("Account")
-
+  Status: OK.
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_attribute("Account","balance","INTEGER")
-
+  Status: OK.
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 0
+      Number of commands: 0
 ->add_command("Account","set_balance",<<["new_balance", "INTEGER"]>>)
-
+  Status: OK.
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 0
+      Number of commands: 1
+        + set_balance
 ->add_query("Account","get_balance",<<>>,"INTEGER")
-
+  Status: OK.
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 1
+        + set_balance
 ->add_assignment_instruction("Account","set_balance","balance")
-
+  Status: OK.
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 1
+        + set_balance
 ->add_call_chain(<<"new_balance">>)
 
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 1
+        + set_balance
 ->add_assignment_instruction("Account","get_balance","Result")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine set_balance in class Account).
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 1
+        + set_balance
 ->add_call_chain(<<"balance">>)
 
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 1
+        + set_balance

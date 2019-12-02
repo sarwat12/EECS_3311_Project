@@ -1,29 +1,175 @@
-
+  Status: OK.
+  Number of classes being specified: 0
 ->add_class("A")
-
+  Status: OK.
+  Number of classes being specified: 1
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_class("B")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_attribute("A","b","B")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 0
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_query("A","q1",<<["i", "INTEGER"]>>,"A")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_assignment_instruction("A","q1","Result")
-
+  Status: OK.
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_call_chain(<<"b", "a">>)
 
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->generate_java_code
 
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_attribute("B","a","A")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_command("B","c1",<<>>)
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_assignment_instruction("B","c1","a")
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->add_call_chain(<<"b", "a">>)
 
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->type_check
-
+  Status: ERROR (An assignment instruction is currently being specified for routine q1 in class A).
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
 ->generate_java_code
 
+  Number of classes being specified: 2
+    A
+      Number of attributes: 1
+        + b: B
+      Number of queries: 1
+        + q1: A
+      Number of commands: 0
+    B
+      Number of attributes: 0
+      Number of queries: 0
+      Number of commands: 0
