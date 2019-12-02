@@ -30,7 +30,7 @@ feature
 	query_status: STRING
 		do
 			create Result.make_empty
-			Result.append("    + " + name + ": " + return_type + "%N")
+			Result.append("        + " + name + ": " + return_type + "%N")
 		end
 
 end

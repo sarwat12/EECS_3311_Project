@@ -28,7 +28,7 @@ feature
 	attribute_status: STRING
 		do
 			create Result.make_empty
-			Result.append("    + " + name + ": " + type + "%N")
+			Result.append("        + " + name + ": " + type + "%N")
 		end
 
 end

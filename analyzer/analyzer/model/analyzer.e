@@ -32,33 +32,36 @@ feature -- model attributes
 
 feature -- model operations
 
-	add_assignment_instruction(cn: STRING ; fn: STRING ; n: STRING)
-		do
-
-		end
-
-	add_attribute(cn: STRING ; fn: STRING ; ft: STRING)
-		do
-
-		end
-
-	add_call_chain(chain: ARRAY[STRING])
-		do
-
-		end
-
 	add_class(cn: STRING)
 		do
 			program.add_class (cn)
 			set_status("  Status: OK.%N")
 		end
 
+	add_attribute(cn: STRING ; fn: STRING ; ft: STRING)
+		do
+			program.add_attribute (cn, fn, ft)
+			set_status("  Status: OK.%N")
+		end
+
 	add_command(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; ft: STRING]])
+		do
+			program.add_command (cn, fn, ps)
+			set_status("  Status: OK.%N")
+		end
+
+	add_query(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; pt: STRING]] ; rt: STRING)
+		do
+			program.add_query (cn, fn, ps, rt)
+			set_status("  Status: OK.%N")
+		end
+
+	add_assignment_instruction(cn: STRING ; fn: STRING ; n: STRING)
 		do
 
 		end
 
-	add_query(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; pt: STRING]] ; rt: STRING)
+	add_call_chain(chain: ARRAY[STRING])
 		do
 
 		end
@@ -176,7 +179,7 @@ feature -- queries
 
 			if start = TRUE then
 				Result.append("  Status: OK.%N")
-				Result.append("  Number of classes being specified: 0")
+				Result.append("  Number of classes being specified: 0%N")
 				start := FALSE
 			end
 			Result.append (status)

@@ -57,16 +57,21 @@ feature
 					end
 				end
 			end
-					if attached {QUERY} c.item then
-						check attached {QUERY} c.item as query then
-							Result.append(query.query_status)
-						end
-					end
-					if attached {COMMAND} c.item then
-						check attached {COMMAND} c.item as command then
-							Result.append(command.command_status)
-						end
+			Result.append("      Number of queries: " + num_queries.out + "%N")
+			across children as c loop
+				if attached {QUERY} c.item then
+					check attached {QUERY} c.item as query then
+						Result.append(query.query_status)
 					end
 				end
 			end
+			Result.append("      Number of commands: " + num_commands.out + "%N")
+			across children as c loop
+				if attached {COMMAND} c.item then
+					check attached {COMMAND} c.item as command then
+						Result.append(command.command_status)
+					end
+				end
+			end
+		end
 end
