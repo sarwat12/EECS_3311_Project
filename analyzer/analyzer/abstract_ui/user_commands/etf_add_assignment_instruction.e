@@ -25,7 +25,16 @@ feature -- command
 				if not (across model.program.children as c some c.item.name ~ cn end) then
 					model.set_status ("  Status: Error (" + cn + " is not an existing class name).")
 				else
-					model.add_assignment_instruction(cn, fn, n)
+					across model.program.children as c loop
+						if c.item.name ~ cn then
+							if across c.item.children as f all f.item.name /~ fn end then
+								model.set_status ("  Status: Error (" + fn + " is not an existing feature name in class " + cn + ").")
+							else
+								model.add_assignment_instruction(cn, fn, n)
+							end
+						end
+					end
+
 				end
 			end
 			etf_cmd_container.on_change.notify ([Current])

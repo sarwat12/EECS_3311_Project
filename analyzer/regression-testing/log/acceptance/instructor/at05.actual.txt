@@ -19,26 +19,23 @@
       Number of queries: 0
       Number of commands: 0
 ->add_command("A","ca",<<["x", "INTEGER"], ["y", "BOOLEAN"], ["x", "A"], ["y", "B"]>>)
-  Status: OK.
+  Status: Error (Duplicated parameter names: x, y).
   Number of classes being specified: 2
     A
       Number of attributes: 0
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
 ->add_command("A","cq",<<["x", "B"], ["y", "INTEGER"], ["y", "A"], ["x", "BOOLEAN"]>>)
-  Status: OK.
+  Status: Error (Duplicated parameter names: y, x).
   Number of classes being specified: 2
     A
       Number of attributes: 0
       Number of queries: 0
-      Number of commands: 2
-        + ca
-        + cq
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0

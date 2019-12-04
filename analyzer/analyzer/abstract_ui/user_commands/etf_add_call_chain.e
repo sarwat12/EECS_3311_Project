@@ -19,6 +19,8 @@ feature -- command
 			else
 				if chain.is_empty then
 					model.set_status ("  Status: Error (Call chain is empty).")
+					model.message.append ("%N  Routine currently being implemented: {" + model.assignment.cn + "}." + model.assignment.fn)
+					model.message.append ("%N  Assignment being specified: " + model.assignment.vn + " := " + model.specified)
 				else
 					model.add_call_chain (chain)
 				end

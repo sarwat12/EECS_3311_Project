@@ -16,14 +16,13 @@
       Number of queries: 0
       Number of commands: 0
 ->add_command("Account","set_balance",<<["new_balance", "INTEGER"]>>)
-  Status: OK.
+  Status: Error (Parameter types do not refer to primitive types or existing classes: INTEGER).
   Number of classes being specified: 1
     Account
       Number of attributes: 1
         + balance: INTEGER
       Number of queries: 0
-      Number of commands: 1
-        + set_balance
+      Number of commands: 0
 ->add_query("Account","get_balance",<<>>,"INTEGER")
   Status: OK.
   Number of classes being specified: 1
@@ -32,9 +31,26 @@
         + balance: INTEGER
       Number of queries: 1
         + get_balance: INTEGER
-      Number of commands: 1
-        + set_balance
+      Number of commands: 0
 ->add_assignment_instruction("Account","set_balance","balance")
+  Status: Error (set_balance is not an existing feature name in class Account).
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 0
+->add_call_chain(<<"new_balance">>)
+  Status: Error (An assignment instruction is not currently being specified).
+  Number of classes being specified: 1
+    Account
+      Number of attributes: 1
+        + balance: INTEGER
+      Number of queries: 1
+        + get_balance: INTEGER
+      Number of commands: 0
+->add_assignment_instruction("Account","get_balance","Result")
   Status: OK.
   Number of classes being specified: 1
     Account
@@ -42,32 +58,9 @@
         + balance: INTEGER
       Number of queries: 1
         + get_balance: INTEGER
-      Number of commands: 1
-        + set_balance
-  Routine currently being implemented: {Account}.set_balance
-  Assignment being specified: balance := ?
-->add_call_chain(<<"new_balance">>)
-
-  Number of classes being specified: 1
-    Account
-      Number of attributes: 1
-        + balance: INTEGER
-      Number of queries: 1
-        + get_balance: INTEGER
-      Number of commands: 1
-        + set_balance
-->add_assignment_instruction("Account","get_balance","Result")
-  Status: Error (An assignment instruction is currently being specified for routine set_balance in class Account).
-  Number of classes being specified: 1
-    Account
-      Number of attributes: 1
-        + balance: INTEGER
-      Number of queries: 1
-        + get_balance: INTEGER
-      Number of commands: 1
-        + set_balance
-  Routine currently being implemented: {Account}.set_balance
-  Assignment being specified: balance := ?
+      Number of commands: 0
+  Routine currently being implemented: {Account}.get_balance
+  Assignment being specified: Result := ?
 ->add_call_chain(<<"balance">>)
 
   Number of classes being specified: 1
@@ -76,5 +69,4 @@
         + balance: INTEGER
       Number of queries: 1
         + get_balance: INTEGER
-      Number of commands: 1
-        + set_balance
+      Number of commands: 0

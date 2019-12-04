@@ -19,38 +19,34 @@
       Number of queries: 0
       Number of commands: 0
 ->add_command("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>)
-  Status: OK.
+  Status: Error (Parameter types do not refer to primitive types or existing classes: int, boolean, C).
   Number of classes being specified: 2
     A
       Number of attributes: 0
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
 ->add_query("A","ca",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"int")
-  Status: Error (ca is already an existing feature name in class A).
+  Status: Error (Parameter types do not refer to primitive types or existing classes: int, int, boolean, boolean, C, C, int, boolean, C).
   Number of classes being specified: 2
     A
       Number of attributes: 0
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
 ->add_query("A","cq",<<["x", "int"], ["y", "boolean"], ["z", "C"]>>,"C")
-  Status: OK.
+  Status: Error (Parameter types do not refer to primitive types or existing classes: int, int, boolean, boolean, C, C, int, boolean, C).
   Number of classes being specified: 2
     A
       Number of attributes: 0
-      Number of queries: 1
-        + cq: C
-      Number of commands: 1
-        + ca
+      Number of queries: 0
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0
@@ -61,24 +57,20 @@
     A
       Number of attributes: 1
         + att: C
-      Number of queries: 1
-        + cq: C
-      Number of commands: 1
-        + ca
+      Number of queries: 0
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0
       Number of commands: 0
 ->add_query("A","ca",<<["x", "INTEGER"], ["y", "BOOLEAN"], ["z", "A"]>>,"C")
-  Status: Error (ca is already an existing feature name in class A).
+  Status: Error (Parameter types do not refer to primitive types or existing classes: INTEGER, INTEGER, BOOLEAN, BOOLEAN, A, INTEGER, BOOLEAN, A).
   Number of classes being specified: 2
     A
       Number of attributes: 1
         + att: C
-      Number of queries: 1
-        + cq: C
-      Number of commands: 1
-        + ca
+      Number of queries: 0
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0

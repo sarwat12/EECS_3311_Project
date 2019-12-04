@@ -67,15 +67,14 @@
       Number of queries: 0
       Number of commands: 0
 ->add_command("A","ca",<<["pa", "A"], ["pb", "B"]>>)
-  Status: OK.
+  Status: Error (Parameter types do not refer to primitive types or existing classes: A, B).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 0
       Number of queries: 0
@@ -92,8 +91,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 1
         + a: A
@@ -111,8 +109,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -131,8 +128,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -152,8 +148,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -174,8 +169,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -197,8 +191,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -214,15 +207,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: OK.
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -237,18 +229,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"c", "b", "a", "b">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -264,15 +253,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -287,18 +275,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"pa", "b">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -314,15 +299,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -337,18 +321,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"b">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -364,15 +345,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -387,18 +367,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"pb">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -414,15 +391,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -437,18 +413,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"b", "c", "a", "b">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -464,15 +437,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -487,18 +459,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"a", "b">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -514,15 +483,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -537,18 +505,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"b", "b", "c", "b">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -564,15 +529,14 @@
       Number of commands: 1
         + cc
 ->add_assignment_instruction("A","ca","b")
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+  Status: Error (ca is not an existing feature name in class A).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -587,18 +551,15 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?
 ->add_call_chain(<<"a", "b", "c">>)
-
+  Status: Error (An assignment instruction is not currently being specified).
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -621,8 +582,7 @@
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -638,15 +598,14 @@
       Number of commands: 1
         + cc
 ->type_check
-  Status: Error (An assignment instruction is currently being specified for routine ca in class A).
+
   Number of classes being specified: 3
     A
       Number of attributes: 2
         + b: B
         + c: C
       Number of queries: 0
-      Number of commands: 1
-        + ca
+      Number of commands: 0
     B
       Number of attributes: 2
         + a: A
@@ -661,5 +620,3 @@
       Number of queries: 0
       Number of commands: 1
         + cc
-  Routine currently being implemented: {A}.ca
-  Assignment being specified: b := ?

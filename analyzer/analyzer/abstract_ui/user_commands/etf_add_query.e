@@ -14,6 +14,9 @@ feature -- command
 	add_query(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; pt: STRING]] ; rt: STRING)
 		require else
 			add_query_precond(cn, fn, ps, rt)
+    	local
+			list: LINKED_LIST[STRING]
+			i: INTEGER
     	do
 			-- perform some update on the model state
 			if model.assignment_instruction = TRUE then
@@ -29,7 +32,36 @@ feature -- command
 						(c.item.name ~ cn) implies (across c.item.children as f some f.item.name ~ fn end) end) then
 						model.set_status ("  Status: Error (" + fn + " is already an existing feature name in class " + cn + ").")
 					else
-						model.add_query(cn, fn, ps, rt)
+						create list.make
+						across ps as p loop
+							across model.program.children as c loop
+								if c.item.name ~ p.item.pn then
+									list.extend (p.item.pn)
+								end
+							end
+						end
+						across ps as p loop
+							if p.item.pn ~ "INTEGER" or p.item.pn ~ "BOOLEAN" then
+								list.extend (p.item.pn)
+							end
+						end
+						if not list.is_empty then
+							model.status.append ("  Status: Error (Parameter names clash with existing classes: ")
+							from
+								i := 1
+							until
+								i > list.count
+							loop
+								if i /~ list.count then
+									model.status.append (list.at (i) + ", ")
+								else
+									model.status.append (list.at (i) + ").")
+								end
+								i := i + 1
+							end
+						else
+							model.add_query (cn, fn, ps, rt)
+						end
 					end
 				end
 			end
