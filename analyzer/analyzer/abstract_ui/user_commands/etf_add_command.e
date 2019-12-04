@@ -14,6 +14,9 @@ feature -- command
 	add_command(cn: STRING ; fn: STRING ; ps: ARRAY[TUPLE[pn: STRING; ft: STRING]])
 		require else
 			add_command_precond(cn, fn, ps)
+		local
+			list: LINKED_LIST[STRING]
+			b: BOOLEAN
     	do
 			-- perform some update on the model state
 			if model.assignment_instruction = TRUE then
@@ -29,7 +32,21 @@ feature -- command
 						(c.item.name ~ cn) implies (across c.item.children as f some f.item.name ~ fn end) end) then
 						model.set_status ("  Status: Error (" + fn + " is already an existing feature name in class " + cn + ").")
 					else
-						model.add_command(cn, fn, ps)
+						create list.make
+						b := (across ps as p some (across model.program.children as c some
+							c.item.name ~ p.item.pn or p.item.pn ~ "INTEGER" or p.item.pn ~ "BOOLEAN" end) end)
+						if b then
+							across ps as p loop
+								across model.program.children as c loop
+									if c.item.name ~ p.item.pn or p.item.pn ~ "INTEGER" or p.item.pn ~ "BOOLEAN" then
+										list.extend (p.item.pn)
+									end
+								end
+							end
+							model.set_status ("")
+						else
+							model.add_command(cn, fn, ps)
+						end
 					end
 				end
 			end
