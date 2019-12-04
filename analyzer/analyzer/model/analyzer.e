@@ -165,14 +165,12 @@ feature --Operations
 			make
 		end
 
-feature --Extra helper features
-
-
 
 feature --Error Reporting
 	message: STRING
 	status: STRING
 
+feature
 	set_status(sts: STRING)
 		do
 			status := sts

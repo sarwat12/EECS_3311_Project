@@ -25,7 +25,7 @@ feature
 			name_exists: not name.is_empty
 		end
 
-feature--Class attributes
+feature --Class attributes
 	name: STRING
 	num_queries: INTEGER
 	num_commands: INTEGER
