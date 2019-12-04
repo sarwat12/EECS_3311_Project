@@ -15,6 +15,8 @@ create
 
 feature
 	make(n: STRING; ps: ARRAY[TUPLE[pn: STRING; ft: STRING]]; rt: STRING)
+		local
+			expr: EXPRESSION
 		do
 			name := n
 			parameters := ps

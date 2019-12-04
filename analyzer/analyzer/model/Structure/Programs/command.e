@@ -15,6 +15,8 @@ create
 
 feature
 	make(n: STRING; p: ARRAY[TUPLE[name: STRING; type: STRING]])
+		local
+			expr: EXPRESSION
 		do
 			name := n
 			create parameters.make_from_array (p)
