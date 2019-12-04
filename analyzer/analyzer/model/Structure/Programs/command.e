@@ -17,12 +17,13 @@ feature
 	make(n: STRING; p: ARRAY[TUPLE[name: STRING; type: STRING]])
 		do
 			name := n
-			create paramaters.make_from_array (p)
+			create parameters.make_from_array (p)
+		ensure
+			same_count: parameters.count = p.count
 		end
 
 feature
-	--name: STRING
-	paramaters: ARRAY[TUPLE[STRING, STRING]]
+	parameters: ARRAY[TUPLE[STRING, STRING]]
 
 feature
 	command_status: STRING

@@ -18,10 +18,11 @@ feature
 		do
 			name:= n
 			type := t
+		ensure
+			name_not_empty: not name.is_empty
 		end
 
 feature
-	--name: STRING
 	type: STRING
 
 feature

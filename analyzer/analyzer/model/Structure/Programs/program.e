@@ -18,6 +18,8 @@ feature
 		do
 			create children.make
 			num_classes := 0
+		ensure
+			empty_classes: num_classes = 0
 		end
 
 feature
@@ -28,6 +30,8 @@ feature
 		do
 			add_child (create {CLASS_DECLARATION}.make (name))
 			num_classes := num_classes + 1
+		ensure
+			num_classes = old num_classes + 1
 		end
 
 	add_attribute(cn: STRING ; fn: STRING ; ft: STRING)

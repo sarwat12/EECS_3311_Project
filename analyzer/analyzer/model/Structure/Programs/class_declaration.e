@@ -21,6 +21,8 @@ feature
 			num_queries := 0
 			num_commands := 0
 			num_attributes := 0
+		ensure
+			name_exists: not name.is_empty
 		end
 
 feature--Class attributes

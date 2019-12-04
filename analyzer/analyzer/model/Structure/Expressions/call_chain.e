@@ -18,6 +18,8 @@ feature
 		do
 			create strings.make_empty
 			strings.force (s, strings.count + 1)
+		ensure
+			incremented: strings.count = old strings.count + 1
 		end
 
 feature

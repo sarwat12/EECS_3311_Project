@@ -19,10 +19,11 @@ feature
 			name := n
 			parameters := ps
 			return_type := rt
+		ensure
+			non_empty_return: not return_type.is_empty
 		end
 
 feature
-	--name: STRING
 	parameters: ARRAY[TUPLE[STRING, STRING]]
 	return_type: STRING
 
